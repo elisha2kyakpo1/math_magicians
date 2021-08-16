@@ -1,18 +1,25 @@
 import React from 'react';
 import './Calculator.css';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    this.setState((state) => calculate(state, e.target.textContent));
   }
 
   render() {
+    const { next, total } = this.state;
     return (
       <div className="container">
         <div className="inner-div">
           <div className="input-div">
-            <div className="input">{0}</div>
+            <div className="input">{next || total || 0}</div>
           </div>
 
           <div className="buttons">
