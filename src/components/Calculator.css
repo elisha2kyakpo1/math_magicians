@@ -1,0 +1,57 @@
+.container,
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+.input {
+  border: none;
+  background-color: #6a737d;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  text-align: right;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.numbers,
+.operators {
+  display: grid;
+}
+
+.numbers {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.o-buttons {
+  background-color: #f66a0a;
+  font-size: 50px;
+  padding: 5px 40px;
+}
+
+.operators {
+  grid-template-columns: 1fr;
+  outline: none;
+  border: none;
+}
+
+button {
+  background-color: #e1e4e8;
+  border: 2px solid #d1d5da;
+  padding: 5px 30px;
+  font-size: 50px;
+}
+
+.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
