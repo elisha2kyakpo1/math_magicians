@@ -2,7 +2,7 @@ import React from 'react';
 import './Calculator.css';
 import calculate from '../logic/calculate';
 
-export default class Calculator extends React.Component {
+class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -52,3 +52,5 @@ export default class Calculator extends React.Component {
     );
   }
 }
+
+export default Calculator;
