@@ -1,56 +1,36 @@
-import React from 'react';
+import { useState } from 'react';
 import './Calculator.css';
 import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.handleClick = this.handleClick.bind(this);
+const Calculator = () => {
+  const [calcObject, setCalcObject] = useState({});
+
+  function handleClick(e) {
+    setCalcObject({ ...calcObject, ...calculate(calcObject, e.target.textContent) });
   }
 
-  handleClick(e) {
-    this.setState((state) => calculate(state, e.target.textContent));
-  }
+  const { next, total } = calcObject;
 
-  render() {
-    const { next, total } = this.state;
-    return (
-      <div className="container">
-        <div className="inner-div">
-          <div className="input-div">
-            <div className="input">{next || total || 0}</div>
-          </div>
+  const buttonNames = [
+    'AC', '+/-', '%', '÷', '7', '8', '9', 'x',
+    '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '=',
+  ];
 
-          <div className="buttons">
-            <div className="numbers">
-              <button type="button" onClick={this.handleClick} value="">AC</button>
-              <button type="button" onClick={this.handleClick} value="">+/-</button>
-              <button type="button" onClick={this.handleClick} value="">%</button>
-              <button type="button" onClick={this.handleClick} value="">7</button>
-              <button type="button" onClick={this.handleClick} value="">8</button>
-              <button type="button" onClick={this.handleClick} value="">9</button>
-              <button type="button" onClick={this.handleClick} value="">4</button>
-              <button type="button" onClick={this.handleClick} value="">5</button>
-              <button type="button" onClick={this.handleClick} value="">6</button>
-              <button type="button" onClick={this.handleClick} value="">1</button>
-              <button type="button" onClick={this.handleClick} value="">2</button>
-              <button type="button" onClick={this.handleClick} value="">3</button>
-              <button className="zero" type="button" onClick={this.handleClick} value="">0</button>
-              <button type="button" onClick={this.handleClick} value="">.</button>
-            </div>
-            <div className="operators">
-              <button type="button" onClick={this.handleClick} className="o-buttons" value="">÷</button>
-              <button type="button" onClick={this.handleClick} className="o-buttons" value="">x</button>
-              <button type="button" onClick={this.handleClick} className="o-buttons" value="">-</button>
-              <button type="button" onClick={this.handleClick} className="o-buttons" value="">+</button>
-              <button type="button" onClick={this.handleClick} className="o-buttons" value="">=</button>
-            </div>
-          </div>
-        </div>
+  const btnClass = (i) => ((((i + 1) % 4 === 0) || i === 18) ? 'o-buttons' : 'buttons');
+
+  return (
+    <div className="container">
+      <div className="inner-div">
+        <div className="input">{next || total || 0}</div>
       </div>
-    );
-  }
-}
+      {buttonNames.map((name, i) => (
+        <button key={i.toString()} type="button" onClick={handleClick} className={btnClass(i)}>
+          {name}
+        </button>
+      ))}
+
+    </div>
+  );
+};
 
 export default Calculator;

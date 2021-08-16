@@ -1,12 +1,18 @@
-.container,
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 20px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-::placeholder {
-  color: #fff;
+.inner-div {
+  grid-column: 1/ span 4;
+}
+
+.container > *:nth-child(18) {
+  grid-column: 1 / span 2;
 }
 
 .input {
@@ -19,29 +25,10 @@
   text-align: right;
 }
 
-.container {
-  margin-top: 20px;
-}
-
-.numbers,
-.operators {
-  display: grid;
-}
-
-.numbers {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .o-buttons {
   background-color: #f66a0a;
   font-size: 50px;
   padding: 5px 40px;
-}
-
-.operators {
-  grid-template-columns: 1fr;
-  outline: none;
-  border: none;
 }
 
 button {
@@ -50,9 +37,4 @@ button {
   padding: 5px 30px;
   font-size: 50px;
   cursor: pointer;
-}
-
-.zero {
-  grid-column-start: 1;
-  grid-column-end: 3;
 }
