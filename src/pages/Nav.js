@@ -10,7 +10,7 @@ function Nav() {
           <li>Home |</li>
         </Link>
         <Link to="/calculator">
-          <li>Calculator |</li>
+          <li title="calculator">Calculator |</li>
         </Link>
         <Link to="/quote">
           <li>Quote</li>
