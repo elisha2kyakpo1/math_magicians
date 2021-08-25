@@ -15,6 +15,12 @@ To get started, you should first get this file in your local machine by cloning 
  npx start
 ```
 
+## Testing
+To test the components, just run the command below on command line.
+```
+  npm test
+```
+
 ## Contributing
 
 Contributions, issues and feature requests are welcome! Start by:
