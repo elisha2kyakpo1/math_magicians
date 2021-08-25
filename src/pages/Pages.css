@@ -35,6 +35,10 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.quote {
+  text-align: center;
+}
+
 p {
   font-size: 1.4rem;
   margin: 20px;
