@@ -7,6 +7,14 @@
   margin-right: auto;
 }
 
+.container1 {
+  display: flex;
+}
+
+.math {
+  margin: auto;
+}
+
 .inner-div {
   grid-column: 1/ span 4;
 }

@@ -1,13 +1,20 @@
+import { Link } from 'react-router-dom';
 import './Pages.css';
 
 function Nav() {
   return (
     <nav className="nav">
-      <h3>Math magician</h3>
+      <h1>Math magician</h1>
       <ul className="links">
-        <li>Home |</li>
-        <li>Calculator |</li>
-        <li>Quote</li>
+        <Link to="/home">
+          <li>Home |</li>
+        </Link>
+        <Link to="/calculator">
+          <li>Calculator |</li>
+        </Link>
+        <Link to="/quote">
+          <li>Quote</li>
+        </Link>
       </ul>
     </nav>
   );

@@ -1,9 +1,11 @@
+import './Pages.css';
+
 function Home() {
   return (
-    <div>
-      <h4>
+    <div className="home">
+      <h2>
         Welcome to our page!
-      </h4>
+      </h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Pellentesque sed fermentum urna. Suspendisse eget magna accumsan,
