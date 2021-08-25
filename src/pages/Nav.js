@@ -7,7 +7,7 @@ function Nav() {
       <h1>Math magician</h1>
       <ul className="links">
         <Link to="/home">
-          <li>Home |</li>
+          <li title="home">Home |</li>
         </Link>
         <Link to="/calculator">
           <li title="calculator">Calculator |</li>

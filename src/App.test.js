@@ -16,21 +16,9 @@ test('does not render the calculator page', () => {
   expect(() => screen.getByText(/Let's do some math!/i)).toThrowError();
 });
 
-test('renders calculator when user click on calculator link', async () => {
-  const { queryByTitle } = render(<App />);
-  const calculator = queryByTitle('calculator');
-  fireEvent.click(calculator);
-
-  await waitFor(() => {
-    screen.getByText('Let\'s do some math!');
-  });
-
-  expect(screen.getByText('Let\'s do some math!')).toBeTruthy();
-});
-
 test('Should do math operations', async () => {
-  const { queryByTitle } = render(<App />);
-  const calculator = queryByTitle('calc');
+  // const { queryByTitle } = render(<App />);
+  const calculator = screen.queryByTitle('calculator');
   fireEvent.click(calculator);
 
   await waitFor(() => {
@@ -53,5 +41,5 @@ test('Should do math operations', async () => {
     screen.getByText('3', { selector: '.input', exact: true });
   });
 
-  expect(screen.getByText('3', { selector: '.input', exact: true })).toBeInTheDocument();
+  expect(screen.getByText(/3/, { selector: '.input', exact: true })).toBeInTheDocument;
 });
