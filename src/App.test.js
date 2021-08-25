@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import {
   render, fireEvent, waitFor, screen,
 } from '@testing-library/react';
@@ -17,7 +18,6 @@ test('does not render the calculator page', () => {
 });
 
 test('Should do math operations', async () => {
-  // const { queryByTitle } = render(<App />);
   const calculator = screen.queryByTitle('calculator');
   fireEvent.click(calculator);
 

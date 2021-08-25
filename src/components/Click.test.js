@@ -26,5 +26,4 @@ describe('Click events', () => {
     userEvent.click(screen.getByText(/Home/));
     expect(screen.getByText('Welcome to our page!')).toBeInTheDocument;
   });
-  
 });
