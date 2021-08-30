@@ -20,7 +20,7 @@ function Home() {
         Pellentesque sed fermentum urna. Suspendisse eget magna accumsan,
         varius nulla et, sodales enim. Sed mattis tincidunt dolor vel blandit.
         In id convallis elit. Sed tincidunt, est vitae pellentesque cursus,
-        risus ante tempor metus, ut interdum eros arcu nec dolor.
+        risus ante tempor metus, ut interd eros arcu nec dolor.
         Maecenas dapibus eleifend lectus nec tempus. Mauris massa est,
         semper vel interdum nec, elementum vitae turpis.
       </p>
