@@ -4,6 +4,10 @@ Math-magician webapp, it's a calculator project which users can use to solve mat
 
 ## Getting Started
 
+
+## Live link
+Click [here](https://math-magiciansek.netlify.app/) for a live app
+
 ## Setup
 
 To get started, you should first get this file in your local machine by cloning or forking this project or typing in your terminal
